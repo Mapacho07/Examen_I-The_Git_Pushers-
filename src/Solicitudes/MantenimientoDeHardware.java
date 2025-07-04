@@ -5,7 +5,6 @@
 package Solicitudes;
 
 import java.time.LocalDate;
-
 /**
  *
  * @author Student
@@ -13,16 +12,21 @@ import java.time.LocalDate;
 public class MantenimientoDeHardware {
 
     private String codigo;
-    //falta agregar el equipo que hay q sacarlo del trabajo de nazareth
+    private String equipo;
     private String motivo;
     private LocalDate fecha;
     private String pieza;
 
-    public MantenimientoDeHardware(String codigo, String motivo, LocalDate fecha, String pieza) {
+    public MantenimientoDeHardware(String codigo, String motivo, LocalDate fecha, String pieza,String equipo) {
         this.codigo = codigo;
         this.motivo = motivo;
         this.fecha = LocalDate.now();
         this.pieza = pieza;
+        this.equipo=equipo;
+    }
+
+    public String getEquipo() {
+        return equipo;
     }
 
     public String getCodigo() {
@@ -43,7 +47,9 @@ public class MantenimientoDeHardware {
 
     @Override
     public String toString() {
-        return "MantenimientoDeHardware{" + "codigo=" + codigo + ", motivo=" + motivo + ", fecha=" + fecha + ", pieza=" + pieza + '}';
+        return "MantenimientoDeHardware{" + "codigo=" + codigo + ", equipo=" + equipo + ", motivo=" + motivo + ", fecha=" + fecha + ", pieza=" + pieza + '}';
     }
+
+ 
 
 }

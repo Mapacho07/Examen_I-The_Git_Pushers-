@@ -12,17 +12,22 @@ import java.time.LocalDate;
  */
 public class MantenimientoDeSoftware {
 
-    //falta agregar el equipo que hay q sacarlo del trabajo de nazareth
     private String codigo;
     private String motivo;
     private LocalDate fecha;
     private String programa;
+    private String equipo;
 
-    public MantenimientoDeSoftware(String codigo, String motivo, LocalDate fecha, String programa) {
+    public MantenimientoDeSoftware(String codigo, String motivo, LocalDate fecha, String programa, String equipo) {
         this.codigo = codigo;
         this.motivo = motivo;
         this.fecha = LocalDate.now();
         this.programa = programa;
+        this.equipo = equipo;
+    }
+
+    public String getEquipo() {
+        return equipo;
     }
 
     public String getCodigo() {
@@ -43,7 +48,7 @@ public class MantenimientoDeSoftware {
 
     @Override
     public String toString() {
-        return "MantenimientoDeSoftware{" + "codigo=" + codigo + ", motivo=" + motivo + ", fecha=" + fecha + ", programa=" + programa + '}';
+        return "MantenimientoDeSoftware{" + "codigo=" + codigo + ", motivo=" + motivo + ", fecha=" + fecha + ", programa=" + programa + ", equipo=" + equipo + '}';
     }
 
 }
