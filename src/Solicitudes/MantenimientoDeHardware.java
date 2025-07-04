@@ -11,15 +11,15 @@ import java.time.LocalDate;
  * @author Student
  */
 public class MantenimientoDeHardware {
-  private String codigo;
-  private String equipo;
-  private String motivo;
-  private LocalDate fecha;
-  private String pieza;
 
-    public MantenimientoDeHardware(String codigo, String equipo, String motivo, LocalDate fecha, String pieza) {
+    private String codigo;
+    //falta agregar el equipo que hay q sacarlo del trabajo de nazareth
+    private String motivo;
+    private LocalDate fecha;
+    private String pieza;
+
+    public MantenimientoDeHardware(String codigo, String motivo, LocalDate fecha, String pieza) {
         this.codigo = codigo;
-        this.equipo = equipo;
         this.motivo = motivo;
         this.fecha = LocalDate.now();
         this.pieza = pieza;
@@ -27,10 +27,6 @@ public class MantenimientoDeHardware {
 
     public String getCodigo() {
         return codigo;
-    }
-
-    public String getEquipo() {
-        return equipo;
     }
 
     public String getMotivo() {
@@ -47,9 +43,7 @@ public class MantenimientoDeHardware {
 
     @Override
     public String toString() {
-        return "MantenimientoDeHardware{" + "codigo=" + codigo + ", equipo=" + equipo + ", motivo=" + motivo + ", fecha=" + fecha + ", pieza=" + pieza + '}';
+        return "MantenimientoDeHardware{" + "codigo=" + codigo + ", motivo=" + motivo + ", fecha=" + fecha + ", pieza=" + pieza + '}';
     }
-  
-  
-    
+
 }
