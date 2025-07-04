@@ -8,6 +8,8 @@ package MetodosGenericos;
  *
  * @author Student
  */
-public interface MetodoGenerico {
-    
+public interface MetodoGenerico <T> {
+    public boolean Añadir(T t);
+    public boolean Eliminar (T t);
+    public T Buscar(Object id);
 }
