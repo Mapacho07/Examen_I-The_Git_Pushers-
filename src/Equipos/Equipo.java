@@ -12,11 +12,16 @@ public class Equipo {
     public String Codigo;
     public String Descripcion;
     public String Ubicacion;
-
+    public Estados estado;
     public String getCodigo() {
         return Codigo;
     }
 
+    public Estados getEstado() {
+        return estado;
+    }
+
+    
     public String getDescripcion() {
         return Descripcion;
     }
@@ -29,25 +34,22 @@ public class Equipo {
         this.Descripcion = Descripcion;
     }
 
-    public Equipo(String Codigo, String Descripcion, String Ubicacion) {
+    public Equipo(String Codigo, String Descripcion, String Ubicacion,Estados estado) {
         this.Codigo = Codigo;
         this.Descripcion = Descripcion;
         this.Ubicacion = Ubicacion;
+        this.estado = estado;
     }
 
     @Override
     public String toString() {
-        return "Equipo{" + "Codigo=" + Codigo + ", Descripcion=" + Descripcion + ", Ubicacion=" + Ubicacion + '}';
+        return "Equipo{" + "Codigo=" + Codigo + ", Descripcion=" + Descripcion + ", Ubicacion=" + Ubicacion + ", estado=" + estado + '}';
     }
+
+   
 
    
   
     
-    
-    
-    
-    
-    
-    
-    
+ 
 }
